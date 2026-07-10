@@ -33,6 +33,12 @@ let totalEmpWage = 0;
 
 console.log("----Employee Wage Computation-----");
 
+// UC4 & UC5  Calculating Wages for a Month assuming 20 Working Days in a Month
+while (totalEmpHours < MAX_WORKING_HOURS && totalWorkingDays < MAX_WORKING_DAYS) {
+
+    totalWorkingDays++;
+
+
 // UC1 & UC2 Ability to Calculate Daily Employee Wage based on part time or full time work
 
  let empCheck = Math.floor(Math.random() * 3);
@@ -62,4 +68,4 @@ switch (empCheck) {
 
     console.log("Working Hours :", empHours);
     console.log("Daily Wage    : $" + dailyWage);
-
+}
