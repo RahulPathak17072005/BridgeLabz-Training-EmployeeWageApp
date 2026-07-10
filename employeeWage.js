@@ -26,6 +26,7 @@ function getWorkingHours(empCheck) {
             return 0;
     }
 }
+
 let totalEmpHours = 0;
 let totalWorkingDays = 0;
 let totalEmpWage = 0;
@@ -33,15 +34,14 @@ let totalEmpWage = 0;
 
 console.log("----Employee Wage Computation-----");
 
+
 // UC4 & UC5  Calculating Wages for a Month assuming 20 Working Days in a Month
 while (totalEmpHours < MAX_WORKING_HOURS && totalWorkingDays < MAX_WORKING_DAYS) {
 
     totalWorkingDays++;
 
-
-// UC1 & UC2 Ability to Calculate Daily Employee Wage based on part time or full time work
-
- let empCheck = Math.floor(Math.random() * 3);
+    // UC1 & UC2 Ability to Calculate Daily Employee Wage based on part time or full time work
+    let empCheck = Math.floor(Math.random() * 3);
 
     let empHours = getWorkingHours(empCheck);
 
@@ -53,7 +53,8 @@ while (totalEmpHours < MAX_WORKING_HOURS && totalWorkingDays < MAX_WORKING_DAYS)
 
     console.log("--------------------------------------");
     console.log("Day :", totalWorkingDays);
-switch (empCheck) {
+
+    switch (empCheck) {
         case IS_FULL_TIME:
             console.log("Status : Full Time");
             break;
@@ -69,3 +70,11 @@ switch (empCheck) {
     console.log("Working Hours :", empHours);
     console.log("Daily Wage    : $" + dailyWage);
 }
+//Calculate Wages till a condition of total working hours of 160 or max days of 20 is reached for a month
+
+
+console.log("------------% Employee Monthly Summary is %----------------");
+
+console.log("Total Working Days  :", totalWorkingDays);
+console.log("Total Working Hours :", totalEmpHours);
+console.log("Total Salary        : in $" + totalEmpWage);
