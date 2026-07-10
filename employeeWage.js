@@ -12,6 +12,29 @@ const WAGE_PER_HOUR = 20;
 const MAX_WORKING_DAYS = 20;
 const MAX_WORKING_HOURS = 160;
 
+// UC3    Refactor the Code to write a function to get work hours
+// Function to Get Working Hours
+function getWorkingHours(empCheck) {
+    switch (empCheck) {
+        case IS_PART_TIME:
+            return PART_TIME_HOURS;
+
+        case IS_FULL_TIME:
+            return FULL_TIME_HOURS;
+
+        default:
+            return 0;
+    }
+}
+let totalEmpHours = 0;
+let totalWorkingDays = 0;
+let totalEmpWage = 0;
+
+
+console.log("----Employee Wage Computation-----");
+
+// UC1 & UC2 Ability to Calculate Daily Employee Wage based on part time or full time work
+
  let empCheck = Math.floor(Math.random() * 3);
 
     let empHours = getWorkingHours(empCheck);
