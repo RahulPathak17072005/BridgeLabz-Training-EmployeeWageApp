@@ -24,3 +24,19 @@ const MAX_WORKING_HOURS = 160;
 
     console.log("--------------------------------------");
     console.log("Day :", totalWorkingDays);
+switch (empCheck) {
+        case IS_FULL_TIME:
+            console.log("Status : Full Time");
+            break;
+
+        case IS_PART_TIME:
+            console.log("Status : Part Time");
+            break;
+
+        default:
+            console.log("Status : Absent");
+    }
+
+    console.log("Working Hours :", empHours);
+    console.log("Daily Wage    : $" + dailyWage);
+
